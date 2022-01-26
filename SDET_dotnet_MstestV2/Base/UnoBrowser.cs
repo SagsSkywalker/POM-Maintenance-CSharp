@@ -17,7 +17,7 @@ namespace SDET_dotnet_MstestV2.Base
 
         public IWebDriver CreateBrowser(Browser browser)
         {
-            IWebDriver driver = new ChromeDriver(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location));
+            IWebDriver driver = new ChromeDriver(@"E:\WebDrivers");
             driver.Manage().Window.Maximize();
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(6);
             driver.Navigate().GoToUrl("https://www.unosquare.com");
