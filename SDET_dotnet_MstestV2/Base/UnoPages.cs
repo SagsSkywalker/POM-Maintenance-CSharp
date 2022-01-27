@@ -3,7 +3,7 @@ using SeleniumExtras.PageObjects;
 
 namespace SDET_dotnet_MstestV2.Base
 {
-    public class UnoPages
+    public abstract class UnoPages
     {
         protected UnoBrowser browser;
         protected IWebDriver driver;

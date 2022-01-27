@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
 using SDET_dotnet_MstestV2.Base;
 using SeleniumExtras.PageObjects;
 using System;
@@ -25,8 +26,9 @@ namespace SDET_dotnet_MstestV2.POM
 
         public ServicesPage GoToServices()
         {
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
+            wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(ServicesMenu));
             browser.Click(ServicesMenu);
-            //browser.Click(PracticeAreas);
             return this;
         }
 

@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
 using SDET_dotnet_MstestV2.Base;
 using SeleniumExtras.PageObjects;
 using System;
@@ -29,6 +30,8 @@ namespace SDET_dotnet_MstestV2.POM
 
         public AboutPage GoToAbout()
         {
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
+            wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(AboutMenu));
             browser.Click(AboutMenu);
             return this;
         }

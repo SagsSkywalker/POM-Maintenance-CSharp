@@ -57,7 +57,7 @@ namespace SDET_dotnet_MstestV2
             Dictionary<string, string> leadsRoles = aboutPage.LeadersList();
             foreach (var item in leadsRoles)
             {
-                System.Console.WriteLine("Name: " + item.Key + " Role: " + item.Value);
+                System.Console.WriteLine("Name: " + item.Key + "\nRole: " + item.Value);
             }
         }
     }
